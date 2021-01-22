@@ -1,0 +1,61 @@
+#include<stdio.h>
+
+#include<string.h>
+
+int main()
+
+{
+
+    int test,i;
+
+    scanf("%d",&test);
+
+    for(i=0;i<test;i++)
+
+    {
+
+    char stra[10000],strb[10000];
+
+    int i,j,lena,lenb, count=0;
+
+ 
+
+    scanf("%s",stra);
+
+    scanf("%s",strb);
+
+ 
+
+    lena=strlen(stra);
+
+    lenb=strlen(strb);
+
+ 
+
+    for(i=0;i<lena;i++)
+
+    {
+
+        for(j=0;j<lenb;j++)
+
+        {
+
+            if(stra[i]==strb[j])
+
+            {count++;
+
+            strb[j]='0';
+
+            break;
+
+            }
+
+        }
+
+    }
+
+    printf("%d \n",lena+lenb-(2*count));
+
+    }
+
+}
